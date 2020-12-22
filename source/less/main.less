@@ -1,3 +1,13 @@
+// === Vars === //
+
+@light-gray: #c3c3c3;
+@dark-color: #151515;
+@primary: #5890f7;
+
+// === / Vars === //
+
+
+
 // === Import styles === //
 
 @import '_typography.less';
@@ -15,10 +25,127 @@ body {
 	margin: 0;
 	padding: 0;
 
+	background-color: @light-gray;
+
 	font-family: 'Roboto', sans-serif;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p, li, a {
 	margin: 0;
+}
+a {
+	transition: color .3s;
+	text-decoration: none;
 }
 
 // === / Basic settings === //
+
+
+
+// === Flexbox settings === //
+
+.container {
+	margin: 0 auto;
+	max-width: 1120px;
+}
+
+// === / Flexbox settings === //
+
+
+
+// === Contacts === //
+
+.section {
+	&--contacts {
+		margin: 0;
+		padding: 15px 0;
+
+		background-color: @dark-color;
+	}
+	&__inner--contacts {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		color: @light-gray;
+	}
+}
+.contacts {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__mail {
+		margin-right: 40px;
+	}
+	&__mail, &__phone {
+		color: @light-gray;
+		&:hover {
+			color: white;
+		}
+		& > i {
+			margin-right: 10px;
+		}
+	}
+}
+.socnet {
+	&__list {
+		margin: 0;
+		padding: 0;
+	}
+	&__item {
+		display: inline-block;
+	}
+	&__link {
+		margin-right: 20px;
+
+		position: relative;
+
+		color: @light-gray;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+// === / Contacts === //
+
+
+
+// === Header === //
+
+.header {
+	margin: 0;
+	padding: 15px 0;
+
+	background-color: white;
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		&__txt {
+			font-family: 'Raleway', sans-serif;
+		}
+	}
+}
+.menu {
+	&__item {
+		display: inline-block;
+	}
+	&__link	{
+		margin-left: 40px;
+		padding: 6px 0 6px 12px;
+
+		position: relative;
+
+		color: @dark-color;
+		&:hover {
+			color: @primary;
+		}
+		&.active {
+			color: @primary;
+		}
+	}
+}
+
+// === / Header === //
