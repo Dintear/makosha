@@ -9,8 +9,84 @@
 
 	<link rel="stylesheet" href="source/css/main.css">
 
+	<style>
+		.typography {
+			background-color: #f2f2f2;
+		}
+		.typography__inner {
+			margin: 30px 0;
+			padding: 30px;
+
+			background-color: #fff;
+		}
+		.typography__inner:first-child {
+			margin-top: 0;
+		}
+		.typography__inner:last-child {
+			margin-bottom: 0;
+		}
+		.typography__title {
+			margin-bottom: 20px;
+
+			text-align: center;
+			text-transform: uppercase;
+		}
+	</style>
+
 </head>
 <body>
+
+	<div class="typography">
+		<div class="container">
+			<div class="typography__inner">
+
+				<hr>
+
+				<h2 class="typography__title">Обычные заголовки</h2>
+
+				<div class="typography__content">
+					<h1>Заголовок 1 уровня</h1>
+					<h2>Заголовок 2 уровня</h2>
+					<h3>Заголовок 3 уровня</h3>
+					<h4>Заголовок 4 уровня</h4>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="typography">
+		<div class="container">
+			<div class="typography__inner">
+
+				<hr>
+
+				<h2 class="typography__title">Заголовок секции</h2>
+
+				<div class="typography__content">
+					<h2 class="section__title">Заголовок</h2>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="typography">
+		<div class="container">
+			<div class="typography__inner">
+
+				<hr>
+
+				<h2 class="typography__title">Кнопки</h2>
+
+				<div class="typography__content">
+					<a href="" class="btn btn--primary">Кнопка</a>
+					<a href="" class="btn btn--dark">Кнопка</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
 	
 </body>
 </html>

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Document</title>
+	<title>Макоша</title>
 
 	<link rel="stylesheet" href="source/css/main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
@@ -17,33 +17,37 @@
 	<div class="contacts">
 		<div class="container">
 			<div class="contacts__inner">
-
-				<!-- иконки социальных сетей -->
+				
+				<!-- иконки соц.сетей -->
 				<div class="socnet">
 					<ul class="socnet__list">
 						<li class="socnet__item">
-							<a href="https://vk.com/" class="socnet__link" target="_blank">
+							<a href="https://vk.com/" class="socnet__link link--light" target="_blank">
 								<i class="fab fa-vk"></i>
 							</a>
 						</li>
 						<li class="socnet__item">
-							<a href="https://www.instagram.com/" class="socnet__link" target="_blank">
+							<a href="https://www.instagram.com/" class="socnet__link link--light" target="_blank">
 								<i class="fab fa-instagram"></i>
 							</a>
 						</li>
 						<li class="socnet__item">
-							<a href="https://www.facebook.com/" class="socnet__link" target="_blank">
+							<a href="https://www.facebook.com/" class="socnet__link link--light" target="_blank">
 								<i class="fab fa-facebook-f"></i>
 							</a>
 						</li>
 					</ul>
 				</div>
-				<!-- / иконки социальных сетей -->
-				
+				<!-- / иконки соц.сетей -->
+
 				<!-- контакты -->
 				<div class="contacts__date">
-					<a href="mailto:email@mail.ru" class="contacts__date__mail"><i class="fas fa-envelope"></i> email@mail.ru</a>
-					<a href="tel:79999999999" class="contacts__date__phone"><i class="fas fa-phone"></i> +7&nbsp;999&nbsp;999-99-99</a>
+					<a href="" class="contacts__date__link contacts__date__link--mail link--light">
+						<i class="fas fa-envelope"></i> email@mail.ru
+					</a>
+					<a href="" class="contacts__date__link contacts__date__link--phone link--light">
+						<i class="fas fa-phone"></i> +7&nbsp;999&nbsp;999-99-99</a>
+					</a>
 				</div>
 				<!-- / контакты -->
 
@@ -61,7 +65,11 @@
 				
 				<!-- логотип -->
 				<div class="header__logo">
-					<h1 class="header__logo__txt"><a href="./index.html" class="header__logo__txt__link">Макоша</a></h1>
+					<h1 class="header__logo__text">
+						<a href="./index.html" class="header__logo__text__link link--primary">
+							Макоша
+						</a>
+					</h1>
 				</div>
 				<!-- / логотип -->
 
@@ -99,33 +107,46 @@
 
 
 
-	<!-- о нас -->
-	<div class="section">
+	<!-- секция о нас -->
+	<div class="section section--light">
 		<div class="container">
 			<div class="section__inner">
 				
-				<h2 class="section__title">о компании</h2>
-				<p class="section__text">Далеко-далеко за словесными горами в стране, гласных и согласных, живут рыбные тексты. Первую не, грустный моей страну рекламных осталось свою взобравшись вопроса!</p>
+				<!-- название и описание -->
+				<div class="section__header">
+					<h2 class="section__title">о компании</h2>
+					<p class="section__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Одна моей языком там ты пояс его предложения свой безорфографичный! <a href="" class="section__link">узнать больше...</a></p>
+				</div>
+				<!-- / название и описание -->
 
+				<!-- контент секции -->
 				<div class="about-us__video">
-					<div class="about-us__video__icon">
-						<i class="fas fa-play fa-4x"></i>
+					<div class="about-us__video__link">
+						<div class="about-us__video__link__icon link--light">
+							<i class="fas fa-play fa-4x"></i>
+						</div>
 					</div>
 				</div>
+				<!-- / контент секции -->
 
 			</div>
 		</div>
 	</div>
-	<!-- / о нас -->
+	<!-- / секция о нас -->
 
 
 
-	<!-- услуги -->
-	<div class="section">
+	<!-- секция услуги -->
+	<div class="section section--lightgray">
 		<div class="container">
 			<div class="section__inner">
 				
-				<h2 class="section__title">наши услуги</h2>
+				<!-- название и описание -->
+				<div class="section__header">
+					<h2 class="section__title">наши услуги</h2>
+					<p class="section__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Одна моей языком там ты пояс его предложения свой безорфографичный!</p>
+				</div>
+				<!-- / название и описание -->
 
 				<!-- список услуг -->
 				<div class="services__list">
@@ -226,19 +247,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- / услуги -->
-
-
-
-	<!-- футер -->
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__inner">
-				
-			</div>
-		</div>
-	</footer>
-	<!-- / футер -->
+	<!-- / секция услуги -->
 
 </body>
 </html>

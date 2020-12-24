@@ -1,0 +1,134 @@
+// === шапка с контактами === //
+
+.contacts {
+	margin: 0;
+	padding: 15px 0;
+
+	background-color: @dark-color;
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__date {
+		display: flex;
+		&__link {
+			& > i {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+.socnet {
+	&__list {
+		margin: 0;
+		padding: 0;
+	}
+	&__item {
+		display: inline-block;
+	}
+	&__link {
+		margin-right: 20px;
+
+		position: relative;
+	}
+}
+
+@media (max-width: @sm) {
+	.contacts {
+		&__date {
+			align-items: flex-end;
+			flex-direction: column;
+			&__link {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+@media (min-width: @lg) {
+	.contacts {
+		&__date {
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row;
+			&__link {
+				&--mail {
+					margin-right: 40px;
+				}
+			}
+		}
+	}
+}
+
+// === / шапка с контактами === //
+
+
+
+// === шапка === //
+
+.header {
+	margin: 0;
+	padding: 15px 0;
+
+	position: sticky;
+	top: 0;
+
+	background-color: white;
+
+	box-shadow: 0 0 4px @light-gray;
+
+	z-index: 100;
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		&__text {
+			font-family: @primary-font;
+		}
+	}
+}
+
+// === / шапка === //
+
+
+
+// === меню === //
+
+.menu {
+	min-width: 500px;
+
+	margin: 0;
+	padding: 15px 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	border-bottom: 1px solid @light-gray;
+	&__item {
+		display: inline-block;
+	}
+	&__link	{
+		margin: 0;
+		padding: 14px 10px;
+
+		position: relative;
+
+		border-bottom: 3px solid transparent;
+
+		color: @dark-color;
+		letter-spacing: 1.04px;
+		&:hover {
+			color: @primary;
+		}
+		&.active {
+			border-bottom-color: @primary;
+
+			color: @primary;
+		}
+	}
+}
+
+// === / меню === //

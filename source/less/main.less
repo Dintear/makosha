@@ -1,9 +1,17 @@
 // === Vars === //
 
 @light-gray: #c3c3c3;
-@dark-gray: #666666;
+@dark-gray: #8F8F8F;
 @dark-color: #151515;
 @primary: #5890f7;
+@primary-dark: #3973DF;
+
+@primary-font: 'Raleway', sans-serif;
+@secondary-font: 'Montserrat Alternates', sans-serif;
+
+@sm: 567px;
+@md: 568px;
+@lg: 992px;
 
 // === / Vars === //
 
@@ -11,52 +19,14 @@
 
 // === Import styles === //
 
+@import '_reset.less';
 @import '_typography.less';
 
+@import 'blocks/_header.less';
+@import 'blocks/_about-us.less';
+@import 'blocks/_services.less';
+
 // === / Import styles === //
-
-
-
-// === Basic settings === //
-
-* {
-	box-sizing: border-box;
-}
-body {
-	margin: 0;
-	padding: 0;
-
-	background-color: white;
-
-	font-family: 'Montserrat Alternates', sans-serif;
-}
-h1, h2, h3, h4 {
-	font-family: 'Raleway', sans-serif;
-}
-h1, h2, h3, h4, p, li, a {
-	margin: 0;
-}
-a {
-	transition: color .3s;
-	text-decoration: none;
-}
-::-webkit-scrollbar-button {
-	background-image:url('');
-	background-repeat:no-repeat;
-	width:5px;
-	height:0px
-}
-::-webkit-scrollbar-track {
-	background-color: @light-gray;
-}
-::-webkit-scrollbar-thumb {
-	background-color: @primary;
-}
-::-webkit-scrollbar{
-	width: 10px;
-}
-
-// === / Basic settings === //
 
 
 
@@ -70,320 +40,12 @@ a {
 }
 .section {
 	padding: 40px 0 60px 0;
-	&:nth-child(2n) {
-		background-color: #f2f2f2;
+	&--light {
+		background-color: white;
 	}
-	&__title {
-		max-width: 300px;
-
-		margin: 0 auto;
-		margin-bottom: 30px;
-		padding: 10px 20px;
-
-		position: relative;
-
-		text-align: center;
-		text-transform: uppercase;
-		word-spacing: 10px;
-		&::before {
-			content: "";
-			position: absolute;
-
-			top: 0;
-			left: 0;
-
-			height: 30px;
-			width: 30px;
-
-			border: 1px solid @primary;
-			border-right: none;
-			border-bottom: none;
-		}
-		&::after {
-			content: "";
-			position: absolute;
-
-			right: 0;
-			bottom: 0;
-
-			height: 30px;
-			width: 30px;
-
-			border: 1px solid @primary;
-			border-left: none;
-			border-top: none;
-		}
-	}
-	&__text {
-		max-width: 600px;
-
-		margin: 0 auto;
-
-		color: @dark-gray;
-		font-size: thin;
-		text-align: center;
+	&--lightgray {
+		background-color: #f5f5f5;
 	}
 }
 
 // === / Flexbox settings === //
-
-
-
-// === Contacts === //
-
-.contacts {
-	margin: 0;
-	padding: 15px 0;
-
-	background-color: @dark-color;
-	&__inner {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		color: @light-gray;
-	}
-	&__date {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		&__mail {
-			margin-right: 40px;
-		}
-		&__mail, &__phone {
-			color: @light-gray;
-			&:hover {
-				color: white;
-			}
-			& > i {
-				margin-right: 10px;
-			}
-		}
-	}
-}
-.socnet {
-	&__list {
-		margin: 0;
-		padding: 0;
-	}
-	&__item {
-		display: inline-block;
-	}
-	&__link {
-		margin-right: 20px;
-
-		position: relative;
-
-		color: @light-gray;
-		&:hover {
-			color: white;
-		}
-	}
-}
-
-// === / Contacts === //
-
-
-
-// === Header === //
-
-.header {
-	margin: 0;
-	padding: 15px 0;
-
-	position: sticky;
-	top: 0;
-
-	background-color: white;
-
-	box-shadow: 0 0 4px @light-gray;
-
-	z-index: 100;
-	&__inner {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	&__logo {
-		&__txt {
-			font-family: 'Raleway', sans-serif;
-			&__link {
-				color: @dark-color;
-				&:hover {
-					color: @primary;
-				}
-			}
-		}
-	}
-}
-.menu {
-	min-width: 500px;
-
-	margin: 0;
-	padding: 15px 0;
-
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
-	border-bottom: 1px solid @light-gray;
-	&__item {
-		display: inline-block;
-	}
-	&__link	{
-		margin: 0;
-		padding: 14px 10px;
-
-		position: relative;
-
-		transition: border-bottom .3s;
-
-		border-bottom: 3px solid transparent;
-
-		color: @dark-color;
-		letter-spacing: 1.04px;
-		&:hover {
-			color: @primary;
-		}
-		&.active {
-			border-bottom-color: @primary;
-
-			color: @primary;
-		}
-	}
-}
-
-// === / Header === //
-
-
-
-// === About us === //
-
-.about-us {
-	&__video {
-		height: 350px;
-		width: 600px;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		margin: 40px auto 0 auto;
-
-		background-color: @light-gray;
-		&__icon {
-			transition: color .3s, box-shadow .3s;
-
-			cursor: pointer;
-
-			color: @dark-color;
-			&:hover {
-				color: white;
-
-				box-shadow: 0 0 4px @light-gray;
-			}
-		}
-	}
-}
-
-// === / About us === //
-
-
-
-// === Services === //
-
-.services {
-	&__list {
-		display: flex;
-		align-items: stretch;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-	&__item {
-		margin: 10px 0;
-		padding: 35px;
-
-		flex: 0 0 32.333%;
-
-		cursor: default;
-
-		background-color: white;
-		&__content {
-			&__title {
-				margin: 15px 0;
-
-				font-family: 'Montserrat Alternates', sans-serif;
-			}
-			&__text {
-				margin-bottom: 15px;
-
-				font-size: .9rem;
-			}
-		}
-		&__footer {
-			&__link {
-				padding-right: 30px;
-
-				display: inline-block;
-				position: relative;
-
-				overflow: hidden;
-
-				color: @dark-color;
-				font-weight: 600;
-				font-family: 'Montserrat Alternates', sans-serif;
-				&::before {
-					content: "";
-					position: absolute;
-
-					top: 45%;
-					right: 0;
-
-					height: .2rem;
-					width: 100%;
-
-					transition: all .3s;
-					transform: scaleX(.2);
-					transform-origin: left center;
-
-					background-color: @primary;
-				}
-				& span {
-					display: inline-block;
-					position: relative;
-
-					transition: all .3s;
-
-					transform: translateX(-200%);
-					&:hover {
-						color: @primary;
-					}
-				}
-			}
-		}
-		&:hover &__footer {
-			&__link {
-				& span {
-					transform: translateX(0%);
-				}
-				&:before {
-					transform-origin: right center;
-				}
-			}
-		}
-	}
-}
-
-// === / Services === //
-
-
-
-// === Footer === //
-
-.footer {
-	min-height: 150px;
-
-	background-color: @dark-color;
-}
-
-// === / Footer === //
