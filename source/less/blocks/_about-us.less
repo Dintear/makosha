@@ -1,0 +1,30 @@
+.about-us {
+	&__video {
+		height: 350px;
+		max-width: 600px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin: 0 auto;
+
+		background-color: @light-gray;
+		&__link {
+			&__icon {
+				transition: color .3s, box-shadow .3s;
+
+				cursor: pointer;
+
+				color: @dark-gray;
+			}
+		}
+	}
+}
+@media (max-width: @sm) {
+	.about-us {
+		&__video {
+			height: 200px;
+		}
+	}
+}
