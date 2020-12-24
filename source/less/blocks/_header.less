@@ -7,7 +7,6 @@
 	background-color: @dark-color;
 	&__inner {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
 	}
 	&__date {
@@ -36,8 +35,13 @@
 
 @media (max-width: @sm) {
 	.contacts {
+		&__inner {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+		}
 		&__date {
-			align-items: flex-end;
+			align-items: flex-start;
 			flex-direction: column;
 			&__link {
 				margin-top: 10px;
@@ -45,8 +49,32 @@
 		}
 	}
 }
+@media (min-width: @md) {
+	.contacts {
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		&__date {
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row;
+			&__link {
+				&--mail {
+					margin-right: 40px;
+				}
+			}
+		}
+	}
+}
 @media (min-width: @lg) {
 	.contacts {
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 		&__date {
 			align-items: center;
 			justify-content: space-between;
